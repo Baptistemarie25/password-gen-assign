@@ -13,6 +13,25 @@ function passwordGenerated() {
   var upperCaseOptions = confirm("Would you like to add uppercase letters?");
   var specialChars = confirm("Do you want to add special characters?");
   var numberOptions = confirm("Do you want to include numbers?");
+
+  var viableChars = "";
+
+  if (lowerCaseOptions) {
+    viableChars += lowerCaseOptions;
+  }
+
+  if (upperCaseOptions) {
+    viableChars += upperCaseOptions;
+  }
+
+  if (specialChars) {
+    viableChars += specialChars;
+  }
+
+  if (numberOptions) {
+    viableChars += numberOptions;
+  }
+
   
 }
 
