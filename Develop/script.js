@@ -1,20 +1,23 @@
-// Assignment code here
-var passwordText = document.querySelector("#password");
-var password = document.querySelector("#generate");
-var characters = "0123456789QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm$#!&%"
-
-// Get references to the #generate element
+// Reference to #generate element
 var generateBtn = document.querySelector("#generate");
+
+// Assign Variables
+var lowerCaseLet= "abcdefghijklmnopqrstuvwxyz";
+var upperCaseLet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var specialChars = "!@#$%^&*"
+var numberOptions = "0123456789"
+
+function passwordGenerated() {
+  var passLength = prompt("Please choose password length. Enter a number between (8-128)");
+  var lowerCaseOptions = confirm("Would you like to add lowercase letters?");
+  var upperCaseOptions = confirm("Would you like to add uppercase letters?");
+  var specialChars = confirm("Do you want to add special characters?");
+  var numberOptions = confirm("Do you want to include numbers?");
+  
+}
 
 // Write password to the #password input
 function writePassword() {
-  window.alert ("Welcome to Password Generator");
-
-  var passwordLength = window.prompt("How long do you want your password to be? Enter a number between 8 or 128 characters.")
-
-  window.alert ("A strong password must be at least 8 characters long. Includes upper and lower case letters, a combination of numbers and letters, and at least one special character.");
-
-  window.prompt ("what would you like to include in your password?");
 
   window.prompt (" ")
   var password = generatePassword();
