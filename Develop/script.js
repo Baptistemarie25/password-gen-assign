@@ -1,5 +1,8 @@
 // Assignment code here
-
+var passwordText = document.querySelector("#password");
+var password = document.querySelector("#generate");
+var passwordLength = 8;
+var characters = "0123456789QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm$#!&%"
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
