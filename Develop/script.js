@@ -8,6 +8,7 @@ var specialChars = "!@#$%^&*";
 var numberOptions = "0123456789";
 
 // Function to generate password 
+
 function passwordGenerated() {
   // Variables for required password criteria 
   var passLength = prompt('Please choose password length. Enter a number between (8-128)');
@@ -15,6 +16,12 @@ function passwordGenerated() {
   var upperCaseOptions = confirm("Would you like to add uppercase letters?");
   var specialChars = confirm("Do you want to add special characters?");
   var numberOptions = confirm("Do you want to include numbers?");
+
+  // if user input is false
+  if (!specialChars && !lowerCaseOptions && !upperCaseOptions && !numberOptions) {
+    window.alert("Password cannot be generated!");
+    return "";
+  }
 
   //variable for acceptable password characters
   var viableChars = "";
@@ -34,6 +41,7 @@ function passwordGenerated() {
 
   if (numberOptions) {
     viableChars += numberOptions;
+  
   }
 
   // for loop 
@@ -49,8 +57,10 @@ function passwordGenerated() {
 
 // Write password to the #password input
 function writePassword() {
-
-  window.prompt (" ")
+  // Welcome prompt
+  window.confirm ("Welcome to Password Generator." + 
+                  "A strong password must be at least 8 characters long with upper and lowercase letters, numbers and special characters. " + 
+                  "Are you ready to create your password?");
   var password = passwordGenerated();
   var passwordText = document.querySelector("#password");
 
